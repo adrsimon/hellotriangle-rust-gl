@@ -36,11 +36,7 @@ fn main() {
     glfw.window_hint(glfw::WindowHint::ContextVersion(3, 3));
     glfw.window_hint(glfw::WindowHint::OpenGlForwardCompat(true));
     glfw.window_hint(glfw::WindowHint::OpenGlProfile(glfw::OpenGlProfileHint::Core));
-    glfw.window_hint(glfw::WindowHint::Resizable(false));
-
-    if cfg!(target_os = "macos") {
-        glfw.window_hint(glfw::WindowHint::OpenGlForwardCompat(true));
-    }
+    glfw.window_hint(glfw::WindowHint::Resizable(true));
 
     let (mut window, events) = glfw.create_window(
         WIDTH, 
